@@ -1,9 +1,12 @@
 import "./App.css";
+import Header from "./components/Header/Header";
+import Inicio from "./components/Inicio/Inicio";
 
 function App() {
   return (
     <div className="App">
-      <h1>Big burguer</h1>
+      <Header />
+      <Inicio />
     </div>
   );
 }

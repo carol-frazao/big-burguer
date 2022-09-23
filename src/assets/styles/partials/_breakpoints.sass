@@ -1,0 +1,18 @@
+@mixin for-desktop
+    @media (min-width: 1200px)
+
+@mixin for-laptop
+    @media (min-width: 1024px)
+        @content
+
+@mixin for-tablet-landscape
+    @media (min-width: 900px)
+        @content
+
+@mixin for-tablet
+    @media (min-width: 768px)
+        @content
+
+@mixin for-mobile-large
+    @media (min-width: 425px)
+        @content
