@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
 header .LogoContainer img {
   width: 28px;
 }
@@ -79,6 +80,9 @@ header .MenuBtn {
   }
 }
 @media (min-width: 900px) {
+  header {
+    height: 4.5rem;
+  }
   header .MenuBtn {
     display: none;
   }
@@ -103,16 +107,165 @@ header .MenuBtn {
   header .Navbar ul li a {
     color: #ffffff;
     font-size: 20px;
+    box-sizing: border-box;
   }
   header .Navbar ul li a:hover {
     color: #FF9F46;
-    border-bottom: solid #FF9F46 3px;
+    text-decoration: underline;
+  }
+}
+@media (min-width: 1200px) {
+  header .LogoContainer strong {
+    font-size: 22px;
+  }
+  header .Navbar ul li a {
+    font-size: 22px;
   }
 }
 
 .Inicio {
   height: 100vh;
-  background-color: grey;
+  flex-direction: column-reverse;
+  margin-top: -3rem;
+  justify-content: center;
+}
+@media (min-width: 900px) {
+  .Inicio {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.Inicio .Marketing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 1.5rem;
+  gap: 10px;
+}
+@media (min-width: 900px) {
+  .Inicio .Marketing {
+    width: 50%;
+    margin-left: 3rem;
+    align-items: flex-start;
+    text-align: start;
+  }
+}
+.Inicio .Marketing .Characteristics strong {
+  font-size: 15px;
+}
+.Inicio .Marketing .Characteristics .faCircle {
+  color: white;
+  font-size: 6px;
+}
+@media (min-width: 425px) {
+  .Inicio .Marketing .Characteristics strong {
+    font-size: 17px;
+  }
+  .Inicio .Marketing .Characteristics .faCircle {
+    font-size: 7px;
+  }
+}
+@media (min-width: 768px) {
+  .Inicio .Marketing .Characteristics strong {
+    font-size: 18px;
+    transition: 0.2s all;
+  }
+}
+@media (min-width: 900px) {
+  .Inicio .Marketing .Characteristics strong {
+    font-size: 20px;
+  }
+  .Inicio .Marketing .Characteristics .faCircle {
+    font-size: 9px;
+  }
+}
+@media (min-width: 1200px) {
+  .Inicio .Marketing .Characteristics {
+    gap: 1rem;
+  }
+  .Inicio .Marketing .Characteristics strong {
+    font-size: 24px;
+  }
+}
+.Inicio .Marketing .Description span {
+  font-size: 14px;
+}
+@media (min-width: 425px) {
+  .Inicio .Marketing .Description span {
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .Inicio .Marketing .Description span {
+    font-size: 18px;
+  }
+}
+@media (min-width: 900px) {
+  .Inicio .Marketing .Description span {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .Inicio .Marketing .Description span {
+    font-size: 24px;
+  }
+}
+.Inicio .Marketing button {
+  font-family: "Patua One", cursive;
+  font-size: 12px;
+  padding: 7px 14px;
+}
+@media (min-width: 425px) {
+  .Inicio .Marketing button {
+    font-size: 14px;
+  }
+}
+@media (min-width: 768px) {
+  .Inicio .Marketing button {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .Inicio .Marketing button {
+    font-size: 20px;
+    padding: 8px 20px;
+    border-radius: 8px;
+  }
+}
+@media (min-width: 768px) {
+  .Inicio .Marketing {
+    gap: 1rem;
+  }
+}
+.Inicio .BurguerImg img {
+  max-width: 500px;
+  width: 250px;
+  transition: 0.2s;
+}
+@media (min-width: 425px) {
+  .Inicio .BurguerImg img {
+    width: 300px;
+  }
+}
+@media (min-width: 768px) {
+  .Inicio .BurguerImg img {
+    width: 320px;
+  }
+}
+@media (min-width: 1024px) {
+  .Inicio .BurguerImg img {
+    width: 350px;
+  }
+}
+@media (min-width: 1200px) {
+  .Inicio .BurguerImg img {
+    width: 420px;
+  }
+}
+@media (min-width: 900px) {
+  .Inicio .BurguerImg {
+    width: 50%;
+  }
 }
 
 body {

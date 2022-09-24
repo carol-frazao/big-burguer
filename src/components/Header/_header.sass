@@ -74,6 +74,8 @@ header
             padding-right: 1rem
 
     @include for-tablet-landscape
+        height: 4.5rem
+
         .MenuBtn
             display: none
 
@@ -99,6 +101,16 @@ header
                     a
                         color: #ffffff
                         font-size: 20px
+                        box-sizing: border-box
                         &:hover
                             color: $orange
-                            border-bottom: solid $orange 3px
+                            text-decoration: underline
+
+    @include for-desktop
+        .LogoContainer
+            strong
+                font-size: 22px
+
+        .Navbar
+            ul li a
+                font-size: 22px
