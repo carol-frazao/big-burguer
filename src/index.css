@@ -145,7 +145,7 @@ header .MenuBtn {
 @media (min-width: 900px) {
   .Inicio .Marketing {
     width: 50%;
-    margin-left: 3rem;
+    margin-left: 1rem;
     align-items: flex-start;
     text-align: start;
   }
@@ -264,7 +264,7 @@ header .MenuBtn {
 }
 @media (min-width: 900px) {
   .Inicio .BurguerImg {
-    width: 50%;
+    width: 40%;
   }
 }
 

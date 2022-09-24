@@ -9,9 +9,9 @@ import Contato from "./components/Contato/Contato";
 const Routes = () => {
   return (
     <BrowserRouter>
-      <Route path="/" component={Inicio} exact />
+      <Route path="/inicio" component={Inicio} exact />
       <Route path="/burguers" component={Burguers} />
-      <Route path="/sob" component={About} />
+      <Route path="/sobre" component={About} />
       <Route path="/contato" component={Contato} />
     </BrowserRouter>
   );
