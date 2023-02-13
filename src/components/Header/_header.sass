@@ -2,115 +2,53 @@
 @import '../../assets/styles/partials/_breakpoints'
 
 header
-    .LogoContainer
-        img
-            width: 28px
-        strong
-            font-size: 18px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 1rem 1.5rem
+    background-color: #151515
+    width: 100%
+    text-transform: uppercase
 
-    .Navbar
-        position: absolute
-        height: 100vh
-        width: 100vw
-        top: 0
-        right: -100%
-        display: none
-        transition: .3s
-        overflow: hidden
-        background: $orange
-
-        ul
-            padding: 0
-            margin: 4rem 0
+    .logo-container
+        a
             display: flex
-            flex-direction: column
-            height: 85%
-            justify-content: space-around
-            gap: 0
+            align-items: center
+            gap: 10px
+            text-decoration: none
+            color: #FF9F46
+            img
+                width: 28px
+            strong
+                font-size: 18px
 
-            #CloseMenuBtn
-                position: absolute
-                width: 100%
-                right: -44%
-                top: 0
-                margin: 1.5rem
-                font-size: 35px
-                cursor: pointer
-                transition: .2s
-                &:hover
-                    color: #724922
-                    font-size: 40px
+    .nav-header
+        ul
+            gap: 1.5rem
+            margin: 0
+            height: 100%
+            display: flex
 
             li
-                height: 100%
+                list-style: none
                 a
-                    height: 100%
-                    color: black
+                    color: #ffffff
                     text-decoration: none
+                    font-size: 18px
                     transition: .2s all
-                    vertical-align: middle
-                    font-size: 27px
-                    display: flex
-                    align-items: center
-                    justify-content: center
-                    &:hover
-                        background: #1a1a1a22
 
-    .MenuBtn
-        color: white
-        font-size: 30px
-        cursor: pointer
+                    &:active, &:hover, &:focus
+                        color: $orange
+                        position: relative
+                        &::after
+                            position: absolute
+                            left: 0
+                            bottom: -3px
+                            content: ''
+                            width: 100%
+                            height: 2px
+                            background-color: $orange
 
-    @include for-tablet
-        .LogoContainer
-            padding-left: 1rem
-            img
-                width: 30px
-                transition: .2s
-            strong
-                font-size: 20px
-                transition: .2s
-        .Navbar
-            padding-right: 1rem
 
-    @include for-tablet-landscape
-        height: 4.5rem
-
-        .MenuBtn
-            display: none
-
-        .Navbar
-            position: relative
-            height: auto
-            width: auto
-            top: 0
-            right: 0
-            display: block
-            background: transparent
-
-            #CloseMenuBtn
-                display: none
-
-            ul
-                flex-direction: row
-                gap: 1.5rem
-                margin: 0
-                height: 100%
-
-                li
-                    a
-                        color: #ffffff
-                        font-size: 20px
-                        box-sizing: border-box
-                        &:hover
-                            color: $orange
-                            text-decoration: underline
-
-    @include for-desktop
-        .LogoContainer
-            strong
-                font-size: 22px
-
-        .Navbar
-            ul li a
-                font-size: 22px
+    .menu-btn
+        display: none
