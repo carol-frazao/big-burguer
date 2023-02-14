@@ -319,6 +319,9 @@ section.about-us .store-image img {
   border: solid 3px rgba(255, 158, 67, 0.6901960784);
   max-width: 500px;
   width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 @media (max-width: 768px) {
   section.about-us .store-image img {
@@ -329,15 +332,70 @@ section.about-us p.store-description {
   color: rgba(255, 255, 255, 0.6078431373);
   text-align: justify;
   padding: 2rem 0;
+  font-size: 14px;
 }
 @media (min-width: 576px) {
   section.about-us p.store-description {
     padding: 2rem 2rem;
+    font-size: 15px;
   }
 }
 section.about-us hr {
   max-width: 8rem;
   opacity: 0.7;
+}
+section.about-us .store-location h2 {
+  color: #f6f6f6;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+section.about-us .store-location .location {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem;
+}
+@media (min-width: 992px) {
+  section.about-us .store-location .location {
+    flex-direction: row;
+  }
+}
+@media (max-width: 992px) {
+  section.about-us .store-location .location {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+section.about-us .store-location .location .iframe iframe {
+  border: solid 3px rgba(255, 158, 67, 0.6901960784) !important;
+  border-radius: 5px;
+}
+section.about-us .store-location .address {
+  margin-top: 8px;
+}
+section.about-us .store-location .address span {
+  display: flex;
+  align-items: center;
+  color: #f6f6f6;
+  font-size: 14px;
+}
+section.about-us .store-location .address span svg {
+  color: #ff9f43;
+  margin-right: 5px;
+}
+section.about-us .store-location .address .rotas {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 8px;
+}
+section.about-us .store-location .address .rotas img {
+  max-width: 40px;
+}
+section.about-us .store-location .address .rotas .google-maps {
+  width: 28px;
+  margin-right: 5px;
 }
 
 .d-none {
