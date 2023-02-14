@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Intro from "./components/Intro/Intro";
 import Burguers from "./components/Burguers/Burguers";
+import About from "./components/About/About";
 import { useState } from "react";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <main onClick={hideNav}>
         <Intro/>
         <Burguers/>
+        <About/>
       </main>
     </div>
   );

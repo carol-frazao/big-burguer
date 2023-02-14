@@ -1,6 +1,6 @@
-import { FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AiOutlineClose } from "react-icons/ai"
+import { CgMenuCheese } from 'react-icons/cg'
 
 const Header = (props) => {
     const {
@@ -34,7 +34,7 @@ const Header = (props) => {
                     </li>
                 </ul>
             </div>
-            <FaBars className='menu-btn' onClick={handleShowNavbar} />
+            <CgMenuCheese className='menu-btn' onClick={handleShowNavbar} />
         </div>
     )
 }

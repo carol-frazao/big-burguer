@@ -1,0 +1,44 @@
+@import '../../assets/styles/partials/_variables'
+@import '../../assets/styles/partials/_breakpoints'
+@import '../../assets/styles/partials/_mixins'
+
+section.about-us
+    min-height: 100vh
+    background-color: $dark
+
+    .store-image
+        @include flex-center
+        flex-wrap: nowrap
+        &::after, &::before
+            content: '★ ★'
+            color: $orange
+            display: inline-block
+            white-space: nowrap
+            @include for-min-lg
+                font-size: 35px
+            @include for-max-lg
+                font-size: 24px
+
+        &::after
+            margin-left: 4%
+        &::before
+            margin-right: 4%
+
+        img
+            border-radius: 10px
+            border: solid 3px $orange-opacity
+            max-width: 500px
+            width: 100%
+            @include for-max-md
+                width: 70%
+
+    p.store-description
+        color: $light-opacity
+        text-align: justify
+        padding: 2rem 0
+        @include for-min-sm
+            padding: 2rem 2rem
+
+    hr
+        max-width: 8rem
+        opacity: .7
