@@ -1,5 +1,3 @@
-import styled from "styled-components"
-import { FaCircle } from "react-icons/fa"
 import { Link } from "react-router-dom"
 
 const Inicio = () => {
