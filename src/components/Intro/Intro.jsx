@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const Inicio = () => {
     return (
-        <div className="intro">
+        <section className="intro" id='intro'>
             <div className="intro-description">
                 <div>
                     <strong> Gigante </strong>
@@ -21,7 +21,7 @@ const Inicio = () => {
             <div className="burguer-img">
                 <img src="/images/burguer-img.png" alt="Burguer Img" />
             </div>
-        </div>
+        </section>
     )
 }
 

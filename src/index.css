@@ -5,12 +5,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 1.5rem;
-  background-color: #151515;
+  background-color: #1e1e1e;
   text-transform: uppercase;
 }
 .header-container .logo-container a {
@@ -134,39 +136,39 @@
   }
 }
 
-.intro {
-  background-color: #151515;
+section.intro {
+  background-color: #1e1e1e;
   display: flex;
   align-items: center;
   min-height: 100vh;
 }
 @media (max-width: 992px) {
-  .intro {
+  section.intro {
     flex-direction: column-reverse;
     justify-content: center;
   }
 }
 @media (min-width: 992px) {
-  .intro {
+  section.intro {
     flex-direction: row;
     justify-content: space-around;
   }
 }
 @media (min-width: 992px) {
-  .intro .burguer-img {
+  section.intro .burguer-img {
     min-width: 40%;
   }
 }
-.intro .burguer-img img {
+section.intro .burguer-img img {
   max-width: 450px;
   width: 100%;
 }
 @media (max-width: 768px) {
-  .intro .burguer-img img {
+  section.intro .burguer-img img {
     width: 80%;
   }
 }
-.intro .intro-description {
+section.intro .intro-description {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -174,34 +176,34 @@
   gap: 6px;
 }
 @media (min-width: 992px) {
-  .intro .intro-description {
+  section.intro .intro-description {
     width: 50%;
   }
 }
-.intro .intro-description div strong {
+section.intro .intro-description div strong {
   color: #ff9f43;
   text-transform: uppercase;
 }
 @media (min-width: 992px) {
-  .intro .intro-description div strong {
+  section.intro .intro-description div strong {
     font-size: 20px;
   }
 }
-.intro .intro-description div strong:nth-child(1)::after, .intro .intro-description div strong:nth-child(2)::after {
+section.intro .intro-description div strong:nth-child(1)::after, section.intro .intro-description div strong:nth-child(2)::after {
   content: "•";
   color: white;
   padding: 0 3px;
 }
-.intro .intro-description span {
+section.intro .intro-description span {
   color: #f6f6f6;
   text-transform: uppercase;
 }
 @media (min-width: 992px) {
-  .intro .intro-description span {
+  section.intro .intro-description span {
     font-size: 20px;
   }
 }
-.intro .intro-description button {
+section.intro .intro-description button {
   border: none;
   border-radius: 5px;
   background: #ff9f43;
@@ -210,7 +212,7 @@
   width: auto;
   transition: 0.2s;
 }
-.intro .intro-description button a {
+section.intro .intro-description button a {
   text-decoration: none;
   color: #1e1e1e;
   font-weight: bold;
@@ -218,8 +220,63 @@
   display: block;
   width: 100%;
 }
-.intro .intro-description button:hover {
+section.intro .intro-description button:hover {
   transform: scale(0.95);
+}
+
+section.burguers {
+  background-color: #262626;
+  min-height: 100vh;
+}
+section.burguers .grid-cards {
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+}
+@media (min-width: 992px) {
+  section.burguers .grid-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 992px) {
+  section.burguers .grid-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  section.burguers .grid-cards {
+    grid-template-columns: 1fr;
+  }
+}
+section.burguers .grid-cards .burguer-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  border: solid 2px rgba(255, 158, 67, 0.6549019608);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+section.burguers .grid-cards .burguer-card .burg-image {
+  max-width: 222px;
+  width: 100%;
+}
+section.burguers .grid-cards .burguer-card .burg-name {
+  color: #f6f6f6;
+  font-weight: 500;
+  font-size: 18px;
+}
+section.burguers .grid-cards .burguer-card .divider {
+  width: 50px;
+  height: 2px;
+  background-color: rgba(255, 158, 67, 0.6549019608);
+}
+section.burguers .grid-cards .burguer-card .burg-description {
+  color: rgba(255, 255, 255, 0.6078431373);
+  font-size: 13px;
+  text-align: justify;
 }
 
 .d-none {
@@ -252,10 +309,32 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 body header {
   position: fixed;
   top: 0;
   width: 100%;
+}
+body .section {
+  padding: 4rem 3rem;
+}
+body .title-section {
+  margin: 0 0 3rem;
+}
+body .title-section strong {
+  color: #f6f6f6;
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #ff9f43;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+body .title-section strong::after, body .title-section strong::before {
+  content: "";
+  background-color: #f6f6f6;
+  width: 15px;
+  height: 3px;
+  display: inline-block;
 }
