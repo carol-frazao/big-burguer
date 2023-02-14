@@ -27,13 +27,13 @@ const About = () => {
                             </span>
                             <div className='rotas'>
                                 <span>
-                                    <a href="#">
+                                    <a href="/">
                                         <img src="images/icons/waze-icon.png" alt="Waze" className='waze'/>
                                     </a>
                                     Veja no Waze
                                 </span>
                                 <span>
-                                    <a href="#">
+                                    <a href="/">
                                         <img src="images/icons/google-maps-icon.png" alt="Google Maps" className='google-maps'/>
                                     </a>
                                     Veja no Google Maps
