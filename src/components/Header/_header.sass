@@ -1,13 +1,12 @@
 @import '../../assets/styles/partials/_variables'
 @import '../../assets/styles/partials/_breakpoints'
 
-header
+.header-container
     display: flex
     align-items: center
     justify-content: space-between
     padding: 1rem 1.5rem
     background-color: #151515
-    width: 100%
     text-transform: uppercase
 
     .logo-container
@@ -23,6 +22,8 @@ header
                 font-size: 18px
 
     .nav-header
+        .close-menu
+            display: none
         ul
             gap: 1.5rem
             margin: 0
@@ -36,19 +37,71 @@ header
                     text-decoration: none
                     font-size: 18px
                     transition: .2s all
+                    display: block
+                    width: 100%
+                    @include for-min-lg
+                        &:active, &:hover, &:focus
+                            color: $orange
+                            position: relative
+                            &::after
+                                position: absolute
+                                left: 0
+                                bottom: -3px
+                                content: ''
+                                width: 100%
+                                height: 2px
+                                background-color: $orange
+        @include for-max-lg
+            background-color: $orange
+            height: 100vh
+            position: fixed
+            top: 0
+            right: 0
+            width: 50%
+            transition: .5s
+            .close-menu
+                display: block
+                position: absolute
+                top: 2rem
+                right: 2rem
+                cursor: pointer
+                font-size: 35px
+                &:hover, &:active
+                    color: red
 
-                    &:active, &:hover, &:focus
-                        color: $orange
-                        position: relative
-                        &::after
-                            position: absolute
-                            left: 0
-                            bottom: -3px
-                            content: ''
-                            width: 100%
-                            height: 2px
-                            background-color: $orange
+            ul
+                padding: 0
+                flex-direction: column
+                justify-content: center
+                gap: 0
+                overflow: hidden
+                li
+                    height: 5rem
+                    line-height: 5rem
+                    cursor: pointer
+                    user-select: none
+                    &:hover
+                        background: #4040401f
+                    &:active
+                       a
+                        color: $secondary
+                    a
+                        font-size: 28px
+                        color: $gray-dark
 
-
+        @include for-max-sm
+            width: 100%
     .menu-btn
         display: none
+        color: white
+        font-size: 25px
+        cursor: pointer
+        &:hover, &:active
+            color: $orange
+        @include for-max-lg
+            display: block
+
+    .hideNav
+        @include for-max-lg
+            right: -100%
+

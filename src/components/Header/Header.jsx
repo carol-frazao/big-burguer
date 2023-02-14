@@ -1,56 +1,41 @@
 import { FaBars } from 'react-icons/fa';
-import { useState } from 'react'
 import { Link } from 'react-router-dom';
-import { FaRegWindowClose } from "react-icons/fa"
+import { AiOutlineClose } from "react-icons/ai"
 
-const openMenu = () => {
-    const btn = document.querySelector('.MenuBtn')
-    const nav = document.querySelector('.Navbar')
-    btn.onclick = () => {
-        setTimeout(() => nav.style.display = "block", 0);
-        setTimeout(() => nav.style.right = "0", 100);
-    }
-}
-const closeMenu = () => {
-    const closeBtn = document.getElementById('CloseMenuBtn')
-    const nav = document.querySelector('.Navbar')
-    closeBtn.onclick = () => {
-        setTimeout(() => nav.style.right = "-100%", 0)
-        setTimeout(() => nav.style.display = "none", 100)
-    }
-}
-
-const Header = () => {
-    const [showNavbar, setShowNavbar] = useState(false)
-    const handleShowNavbar = () => setShowNavbar(!showNavbar)
+const Header = (props) => {
+    const {
+        handleShowNavbar,
+        showNavbar,
+        hideNav
+    } = props
 
     return (
-        <header>
+        <div className='header-container'>
             <div className='logo-container'>
-                <Link to="/">
+                <a href="/">
                     <img src="/images/icons/burguer-logo-icon.png" alt="Logo" />
                     <strong> Big Burguer </strong>
-                </Link>
+                </a>
             </div>
-            <div className='nav-header'>
+            <div className={`nav-header ${!showNavbar && 'hideNav'}`}>
                 <ul>
-                    {/* <FaRegWindowClose className='close-menu' onClick={handleShowNavbar} /> */}
+                    <AiOutlineClose className='close-menu' onClick={handleShowNavbar} />
                     <li>
-                        <Link to="/inicio"> Início </Link>
+                        <Link to="/inicio" onClick={hideNav}> Início </Link>
                     </li>
                     <li>
-                        <Link to="/burgers"> Burguers </Link>
+                        <Link to="/burgers" onClick={hideNav}> Burguers </Link>
                     </li>
                     <li>
-                        <Link to="/sobre"> Sobre nós </Link>
+                        <Link to="/sobre" onClick={hideNav}> Sobre nós </Link>
                     </li>
                     <li>
-                        <Link to="/contato"> Contato </Link>
+                        <Link to="/contato" onClick={hideNav}> Contato </Link>
                     </li>
                 </ul>
             </div>
             <FaBars className='menu-btn' onClick={handleShowNavbar} />
-        </header>
+        </div>
     )
 }
 
