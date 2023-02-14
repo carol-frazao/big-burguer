@@ -13,7 +13,7 @@ const Inicio = () => {
                 </div>
 
                 <span>
-                    Experimente o melhor hambúrguer de São Paulo. Viva essa experiência!
+                    Experimente o melhor hambúrguer de São Paulo. <br/> Viva essa experiência!
                 </span>
 
                 <button>
