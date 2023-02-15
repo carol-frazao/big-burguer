@@ -1,0 +1,43 @@
+@import '../../assets/styles/partials/_variables'
+@import '../../assets/styles/partials/_breakpoints'
+@import '../../assets/styles/partials/_mixins'
+
+section.burguers
+    background-color: $light-dark
+    min-height: 100vh
+
+    .grid-cards
+        display: grid
+        justify-items: center
+        gap: 2rem
+
+        @include for-min-lg
+            grid-template-columns: repeat(3, 1fr)
+        @include for-max-lg
+            grid-template-columns: repeat(2, 1fr)
+        @include for-max-sm
+            grid-template-columns: 1fr
+
+        .burguer-card
+            @include flex-center
+            flex-direction: column
+            gap: 10px
+            max-width: 300px
+            border: solid 2px #ff9e43a7
+            border-radius: 8px
+            padding: 1.5rem
+            .burg-image
+                max-width: 222px
+                width: 100%
+            .burg-name
+                color: $light
+                font-weight: 500
+                font-size: 18px
+            .divider
+                width: 50px
+                height: 2px
+                background-color: #ff9e43a7
+            .burg-description
+                color: #ffffff9b
+                font-size: 13px
+                text-align: justify
