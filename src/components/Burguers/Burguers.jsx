@@ -4,9 +4,7 @@ const Burguers = () => {
     return (
         <section className='burguers section' id='burguers'>
             <div className="burgs-container">
-                <div className="title-section">
-                    <strong> Burguers </strong>
-                </div>
+                <h1 className="title-section"> Burguers </h1>
 
                 <div className="grid-cards">
                     <div className="burguer-card">

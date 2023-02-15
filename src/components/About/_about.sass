@@ -1,0 +1,101 @@
+@import '../../assets/styles/partials/_variables'
+@import '../../assets/styles/partials/_breakpoints'
+@import '../../assets/styles/partials/_mixins'
+
+section.about-us
+    min-height: 100vh
+    background-color: $dark
+
+    .store-image
+        @include flex-center
+        flex-wrap: nowrap
+        &::after, &::before
+            content: '★ ★'
+            color: $orange
+            display: inline-block
+            white-space: nowrap
+            @include for-min-lg
+                font-size: 35px
+            @include for-max-lg
+                font-size: 24px
+
+        &::after
+            margin-left: 4%
+        &::before
+            margin-right: 4%
+
+        img
+            border-radius: 10px
+            border: solid 3px $orange-opacity
+            max-width: 500px
+            width: 100%
+            user-select: none
+            @include for-max-md
+                width: 70%
+
+    p.store-description
+        color: $light-opacity
+        text-align: justify
+        padding: 2rem 0
+        font-size: 14px
+        @include for-min-sm
+            padding: 2rem 2rem
+            font-size: 15px
+
+    hr
+        max-width: 8rem
+        opacity: .7
+
+    .store-location
+        h2
+            color: $light
+            font-size: 20px
+            text-transform: uppercase
+            margin-top: 2rem
+        .location
+            display: flex
+            justify-content: center
+            gap: 1.5rem
+            margin: 2rem
+
+            @include for-min-lg
+                flex-direction: row
+            @include for-max-lg
+                flex-direction: column
+                align-items: center
+            @include for-max-sm
+                margin: 1rem 0
+
+            .iframe
+                iframe
+                    border: solid 3px $orange-opacity !important
+                    border-radius: 5px
+                    @include for-max-sm
+                        min-height: 200px
+                        max-width: 200px
+                        width: 100%
+                        height: auto
+
+        .address
+            span
+                display: flex
+                align-items: center
+                color: $light
+                font-size: 14px
+                @include for-max-sm
+                    font-size: 12px
+                svg
+                    color: $orange
+                    margin-right: 5px
+                    @include for-max-sm
+                        display: none
+            .rotas
+                display: flex
+                justify-content: space-between
+                gap: 10px
+                margin-top: 8px
+
+                img
+                    max-width: 40px
+                    width: 28px
+                    margin-right: 4px
