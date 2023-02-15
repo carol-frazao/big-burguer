@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 const Inicio = () => {
     return (
         <Home className="Inicio">
-            <div className="Marketing">
+            {/* <div className="Marketing">
                 <Characteristics className="Characteristics">
                     <Strong> Gigante </Strong>
                     <FaCircle className="faCircle" />
@@ -27,7 +27,7 @@ const Inicio = () => {
 
             <div className="BurguerImg">
                 <img src="/images/burguer-img.png" alt="Burguer Img" />
-            </div>
+            </div> */}
         </Home>
     )
 }

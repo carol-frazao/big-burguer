@@ -1,125 +1,134 @@
 @import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
-header .LogoContainer img {
-  width: 28px;
-}
-header .LogoContainer strong {
-  font-size: 18px;
-}
-header .Navbar {
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  top: 0;
-  right: -100%;
-  display: none;
-  transition: 0.3s;
-  overflow: hidden;
-  background: #FF9F46;
-}
-header .Navbar ul {
-  padding: 0;
-  margin: 4rem 0;
-  display: flex;
-  flex-direction: column;
-  height: 85%;
-  justify-content: space-around;
-  gap: 0;
-}
-header .Navbar ul #CloseMenuBtn {
-  position: absolute;
-  width: 100%;
-  right: -44%;
-  top: 0;
-  margin: 1.5rem;
-  font-size: 35px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-header .Navbar ul #CloseMenuBtn:hover {
-  color: #724922;
-  font-size: 40px;
-}
-header .Navbar ul li {
-  height: 100%;
-}
-header .Navbar ul li a {
-  height: 100%;
-  color: black;
-  text-decoration: none;
-  transition: 0.2s all;
-  vertical-align: middle;
-  font-size: 27px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+.header-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background-color: #151515;
+  text-transform: uppercase;
 }
-header .Navbar ul li a:hover {
-  background: rgba(26, 26, 26, 0.1333333333);
+.header-container .logo-container a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #FF9F46;
 }
-header .MenuBtn {
-  color: white;
-  font-size: 30px;
-  cursor: pointer;
+.header-container .logo-container a img {
+  width: 28px;
 }
-@media (min-width: 768px) {
-  header .LogoContainer {
-    padding-left: 1rem;
-  }
-  header .LogoContainer img {
-    width: 30px;
-    transition: 0.2s;
-  }
-  header .LogoContainer strong {
-    font-size: 20px;
-    transition: 0.2s;
-  }
-  header .Navbar {
-    padding-right: 1rem;
-  }
+.header-container .logo-container a strong {
+  font-size: 18px;
 }
-@media (min-width: 900px) {
-  header {
-    height: 4.5rem;
-  }
-  header .MenuBtn {
-    display: none;
-  }
-  header .Navbar {
+.header-container .nav-header .close-menu {
+  display: none;
+}
+.header-container .nav-header ul {
+  gap: 1.5rem;
+  margin: 0;
+  height: 100%;
+  display: flex;
+}
+.header-container .nav-header ul li {
+  list-style: none;
+}
+.header-container .nav-header ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.2s all;
+  display: block;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .header-container .nav-header ul li a:active, .header-container .nav-header ul li a:hover, .header-container .nav-header ul li a:focus {
+    color: #ff9f43;
     position: relative;
-    height: auto;
-    width: auto;
+  }
+  .header-container .nav-header ul li a:active::after, .header-container .nav-header ul li a:hover::after, .header-container .nav-header ul li a:focus::after {
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #ff9f43;
+  }
+}
+@media (max-width: 992px) {
+  .header-container .nav-header {
+    background-color: #ff9f43;
+    height: 100vh;
+    position: fixed;
     top: 0;
     right: 0;
+    width: 50%;
+    transition: 0.5s;
+  }
+  .header-container .nav-header .close-menu {
     display: block;
-    background: transparent;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    font-size: 35px;
   }
-  header .Navbar #CloseMenuBtn {
-    display: none;
+  .header-container .nav-header .close-menu:hover, .header-container .nav-header .close-menu:active {
+    color: red;
   }
-  header .Navbar ul {
-    flex-direction: row;
-    gap: 1.5rem;
-    margin: 0;
-    height: 100%;
+  .header-container .nav-header ul {
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    overflow: hidden;
   }
-  header .Navbar ul li a {
-    color: #ffffff;
-    font-size: 20px;
-    box-sizing: border-box;
+  .header-container .nav-header ul li {
+    height: 5rem;
+    line-height: 5rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
   }
-  header .Navbar ul li a:hover {
-    color: #FF9F46;
-    text-decoration: underline;
+  .header-container .nav-header ul li:hover {
+    background: rgba(64, 64, 64, 0.1215686275);
+  }
+  .header-container .nav-header ul li:active a {
+    color: #82868b;
+  }
+  .header-container .nav-header ul li a {
+    font-size: 28px;
+    color: #1e1e1e;
   }
 }
-@media (min-width: 1200px) {
-  header .LogoContainer strong {
-    font-size: 22px;
+@media (max-width: 576px) {
+  .header-container .nav-header {
+    width: 100%;
   }
-  header .Navbar ul li a {
-    font-size: 22px;
+}
+.header-container .menu-btn {
+  display: none;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+.header-container .menu-btn:hover, .header-container .menu-btn:active {
+  color: #ff9f43;
+}
+@media (max-width: 992px) {
+  .header-container .menu-btn {
+    display: block;
+  }
+}
+@media (max-width: 992px) {
+  .header-container .hideNav {
+    right: -100%;
   }
 }
 
@@ -129,146 +138,41 @@ header .MenuBtn {
   margin-top: -3rem;
   justify-content: center;
 }
-@media (min-width: 900px) {
-  .Inicio {
-    flex-direction: row;
-    justify-content: space-around;
-  }
+
+.d-none {
+  display: none;
 }
-.Inicio .Marketing {
+
+.d-flex {
   display: flex;
-  flex-direction: column;
+}
+
+.d-block {
+  display: block;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-items-center {
   align-items: center;
-  padding: 10px 1.5rem;
-  gap: 10px;
-}
-@media (min-width: 900px) {
-  .Inicio .Marketing {
-    width: 50%;
-    margin-left: 1rem;
-    align-items: flex-start;
-    text-align: start;
-  }
-}
-.Inicio .Marketing .Characteristics strong {
-  font-size: 15px;
-}
-.Inicio .Marketing .Characteristics .faCircle {
-  color: white;
-  font-size: 6px;
-}
-@media (min-width: 425px) {
-  .Inicio .Marketing .Characteristics strong {
-    font-size: 17px;
-  }
-  .Inicio .Marketing .Characteristics .faCircle {
-    font-size: 7px;
-  }
-}
-@media (min-width: 768px) {
-  .Inicio .Marketing .Characteristics strong {
-    font-size: 18px;
-    transition: 0.2s all;
-  }
-}
-@media (min-width: 900px) {
-  .Inicio .Marketing .Characteristics strong {
-    font-size: 20px;
-  }
-  .Inicio .Marketing .Characteristics .faCircle {
-    font-size: 9px;
-  }
-}
-@media (min-width: 1200px) {
-  .Inicio .Marketing .Characteristics {
-    gap: 1rem;
-  }
-  .Inicio .Marketing .Characteristics strong {
-    font-size: 24px;
-  }
-}
-.Inicio .Marketing .Description span {
-  font-size: 14px;
-}
-@media (min-width: 425px) {
-  .Inicio .Marketing .Description span {
-    font-size: 16px;
-  }
-}
-@media (min-width: 768px) {
-  .Inicio .Marketing .Description span {
-    font-size: 18px;
-  }
-}
-@media (min-width: 900px) {
-  .Inicio .Marketing .Description span {
-    font-size: 20px;
-  }
-}
-@media (min-width: 1200px) {
-  .Inicio .Marketing .Description span {
-    font-size: 24px;
-  }
-}
-.Inicio .Marketing button {
-  font-family: "Patua One", cursive;
-  font-size: 12px;
-  padding: 7px 14px;
-}
-@media (min-width: 425px) {
-  .Inicio .Marketing button {
-    font-size: 14px;
-  }
-}
-@media (min-width: 768px) {
-  .Inicio .Marketing button {
-    font-size: 15px;
-  }
-}
-@media (min-width: 1200px) {
-  .Inicio .Marketing button {
-    font-size: 20px;
-    padding: 8px 20px;
-    border-radius: 8px;
-  }
-}
-@media (min-width: 768px) {
-  .Inicio .Marketing {
-    gap: 1rem;
-  }
-}
-.Inicio .BurguerImg img {
-  max-width: 500px;
-  width: 250px;
-  transition: 0.2s;
-}
-@media (min-width: 425px) {
-  .Inicio .BurguerImg img {
-    width: 300px;
-  }
-}
-@media (min-width: 768px) {
-  .Inicio .BurguerImg img {
-    width: 320px;
-  }
-}
-@media (min-width: 1024px) {
-  .Inicio .BurguerImg img {
-    width: 350px;
-  }
-}
-@media (min-width: 1200px) {
-  .Inicio .BurguerImg img {
-    width: 420px;
-  }
-}
-@media (min-width: 900px) {
-  .Inicio .BurguerImg {
-    width: 40%;
-  }
 }
 
 body {
-  font-family: "Patua One", cursive;
+  font-family: "Poppins", sans-serif;
   overflow: hidden;
+}
+body header {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
