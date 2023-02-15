@@ -367,12 +367,22 @@ section.about-us .store-location .location {
     align-items: center;
   }
 }
+@media (max-width: 576px) {
+  section.about-us .store-location .location {
+    margin: 1rem 0;
+  }
+}
 section.about-us .store-location .location .iframe iframe {
   border: solid 3px rgba(255, 158, 67, 0.6901960784) !important;
   border-radius: 5px;
 }
-section.about-us .store-location .address {
-  margin-top: 8px;
+@media (max-width: 576px) {
+  section.about-us .store-location .location .iframe iframe {
+    min-height: 200px;
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+  }
 }
 section.about-us .store-location .address span {
   display: flex;
@@ -380,9 +390,19 @@ section.about-us .store-location .address span {
   color: #f6f6f6;
   font-size: 14px;
 }
+@media (max-width: 576px) {
+  section.about-us .store-location .address span {
+    font-size: 12px;
+  }
+}
 section.about-us .store-location .address span svg {
   color: #ff9f43;
   margin-right: 5px;
+}
+@media (max-width: 576px) {
+  section.about-us .store-location .address span svg {
+    display: none;
+  }
 }
 section.about-us .store-location .address .rotas {
   display: flex;
@@ -392,10 +412,8 @@ section.about-us .store-location .address .rotas {
 }
 section.about-us .store-location .address .rotas img {
   max-width: 40px;
-}
-section.about-us .store-location .address .rotas .google-maps {
   width: 28px;
-  margin-right: 5px;
+  margin-right: 4px;
 }
 
 .d-none {

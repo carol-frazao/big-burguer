@@ -63,23 +63,32 @@ section.about-us
             @include for-max-lg
                 flex-direction: column
                 align-items: center
+            @include for-max-sm
+                margin: 1rem 0
 
             .iframe
                 iframe
                     border: solid 3px $orange-opacity !important
                     border-radius: 5px
+                    @include for-max-sm
+                        min-height: 200px
+                        max-width: 200px
+                        width: 100%
+                        height: auto
 
         .address
-            margin-top: 8px
-
             span
                 display: flex
                 align-items: center
                 color: $light
                 font-size: 14px
+                @include for-max-sm
+                    font-size: 12px
                 svg
                     color: $orange
                     margin-right: 5px
+                    @include for-max-sm
+                        display: none
             .rotas
                 display: flex
                 justify-content: space-between
@@ -88,6 +97,5 @@ section.about-us
 
                 img
                     max-width: 40px
-                .google-maps
                     width: 28px
-                    margin-right: 5px
+                    margin-right: 4px
