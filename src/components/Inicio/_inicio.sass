@@ -1,110 +1,70 @@
 @import '../../assets/styles/partials/_variables'
 @import '../../assets/styles/partials/_breakpoints'
 
-.Inicio
-    height: 100vh
-    flex-direction: column-reverse
-    margin-top: -3rem
-    justify-content: center
+.intro
+    background-color: #151515
+    display: flex
+    align-items: center
+    min-height: 100vh
 
-    // @include for-tablet-landscape
-    //     flex-direction: row
-    //     justify-content: space-around
+    @include for-max-lg
+        flex-direction: column-reverse
+        justify-content: center
+    @include for-min-lg
+        flex-direction: row
+        justify-content: space-around
 
-    // .Marketing
-    //     display: flex
-    //     flex-direction: column
-    //     align-items: center
-    //     padding: 10px 1.5rem
-    //     gap: 10px
+    .burguer-img
+        @include for-min-lg
+            min-width: 40%
+        img
+            max-width: 450px
+            width: 100%
+            @include for-max-md
+                width: 80%
 
-    //     @include for-tablet-landscape
-    //         width: 50%
-    //         margin-left: 1rem
-    //         align-items: flex-start
-    //         text-align: start
+    .intro-description
+        padding: 1.5rem
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 6px
+        @include for-min-lg
+            width: 50%
+        div strong
+            color: $orange
+            text-transform: uppercase
+            @include for-min-lg
+                font-size: 20px
+            &:nth-child(1), &:nth-child(2)
+                &::after
+                    content: '•'
+                    color: white
+                    padding: 0 3px
+        span
+            color: $light
+            text-transform: uppercase
+            @include for-min-lg
+                font-size: 20px
+        button
+            border: none
+            border-radius: 5px
+            background: $orange
+            padding: 8px 14px
+            margin-top: 3px
+            width: auto
+            transition: .2s
+            a
+                text-decoration: none
+                color: $gray-dark
+                font-weight: bold
+                text-transform: uppercase
+                display: block
+                width: 100%
+            &:hover
+                -webkit-transform: scale(.95)
+                -moz-transform: scale(.95)
+                -o-transform: scale(.95)
+                transform: scale(.95)
 
-    //     .Characteristics
-    //         strong
-    //             font-size: 15px
-    //         .faCircle
-    //             color: white
-    //             font-size: 6px
 
-    //         @include for-mobile-large
-    //             strong
-    //                 font-size: 17px
-    //             .faCircle
-    //                 font-size: 7px
-
-    //         @include for-tablet
-    //             strong
-    //                 font-size: 18px
-    //                 transition: .2s all
-
-    //         @include for-tablet-landscape
-    //             strong
-    //                 font-size: 20px
-    //             .faCircle
-    //                 font-size: 9px
-
-    //         @include for-desktop
-    //             gap: 1rem
-    //             strong
-    //                 font-size: 24px
-
-    //     .Description
-    //         span
-    //             font-size: 14px
-
-    //             @include for-mobile-large
-    //                 font-size: 16px
-
-    //             @include for-tablet
-    //                 font-size: 18px
-
-    //             @include for-tablet-landscape
-    //                 font-size: 20px
-
-    //             @include for-desktop
-    //                 font-size: 24px
-
-    //     button
-    //         font-family: $PatuaOne
-    //         font-size: 12px
-    //         padding: 7px 14px
-
-    //         @include for-mobile-large
-    //             font-size: 14px
-
-    //         @include for-tablet
-    //             font-size: 15px
-
-    //         @include for-desktop
-    //             font-size: 20px
-    //             padding: 8px 20px
-    //             border-radius: 8px
-
-    //     @include for-tablet
-    //         gap: 1rem
-
-    // .BurguerImg
-    //     img
-    //         max-width: 500px
-    //         width: 250px
-    //         transition: .2s
-
-    //         @include for-mobile-large
-    //             width: 300px
-
-    //         @include for-tablet
-    //             width: 320px
-
-    //         @include for-laptop
-    //             width: 350px
-
-    //         @include for-desktop
-    //             width: 420px
-
-    //     @include for-tablet-landscape
-    //         width: 40%
