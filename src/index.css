@@ -9,6 +9,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 .header-container {
   display: flex;
   align-items: center;
@@ -416,6 +418,163 @@ section.about-us .store-location .address .rotas img {
   margin-right: 4px;
 }
 
+.contact {
+  background-color: #262626;
+}
+.contact .contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.contact .contact-container .phones {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+@media (max-width: 576px) {
+  .contact .contact-container .phones {
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+  }
+}
+.contact .contact-container .phones a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: #f6f6f6;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+.contact .contact-container .phones a:hover {
+  color: #ff9f43;
+}
+.contact .contact-container .phones .tel svg {
+  color: #377dc3;
+}
+.contact .contact-container .phones .wpp svg {
+  color: #28c76f;
+}
+.contact .contact-container .phones .telegram svg {
+  color: #04c6db;
+  background: #f6f6f6;
+  border-radius: 50%;
+}
+.contact .contact-container hr {
+  width: 100px;
+  margin-top: 2rem;
+  margin-bottom: 1.4rem;
+}
+@media (max-width: 576px) {
+  .contact .contact-container hr {
+    width: 60px;
+  }
+}
+.contact .contact-container span {
+  color: #f6f6f6;
+}
+.contact .contact-container .form-container {
+  width: 100%;
+}
+.contact .contact-container .form-container form {
+  width: 50%;
+}
+@media (max-width: 992px) {
+  .contact .contact-container .form-container form {
+    width: 70%;
+  }
+}
+@media (max-width: 576px) {
+  .contact .contact-container .form-container form {
+    width: 100%;
+  }
+}
+.contact .contact-container .form-container form .label-float {
+  position: relative;
+  padding-top: 18px;
+}
+.contact .contact-container .form-container form .label-float label {
+  color: rgba(255, 255, 255, 0.6078431373);
+}
+.contact .contact-container .form-container form .label-float textarea {
+  border: solid 2px #82868b !important;
+  resize: none;
+}
+.contact .contact-container .form-container form .label-float textarea:focus {
+  border: solid 2px #ff9f43 !important;
+}
+.contact .contact-container .form-container form .label-float input, .contact .contact-container .form-container form .label-float textarea {
+  color: #f6f6f6;
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom: solid 2px #82868b;
+  outline: none;
+  padding: 4px;
+  min-width: 180px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-appearance: none;
+}
+.contact .contact-container .form-container form .label-float input:focus, .contact .contact-container .form-container form .label-float textarea:focus {
+  border-bottom: 2px solid #ff9f43;
+}
+.contact .contact-container .form-container form .label-float input::-moz-placeholder, .contact .contact-container .form-container form .label-float textarea::-moz-placeholder {
+  color: transparent;
+}
+.contact .contact-container .form-container form .label-float input::placeholder, .contact .contact-container .form-container form .label-float textarea::placeholder {
+  color: transparent;
+}
+.contact .contact-container .form-container form .label-float input:focus:required:invalid + label:before, .contact .contact-container .form-container form .label-float textarea:focus:required:invalid + label:before {
+  content: "*";
+  color: #ea5455;
+  margin-right: 4px;
+  font-size: 12px;
+}
+.contact .contact-container .form-container form .label-float input:not(:-moz-placeholder-shown) + label, .contact .contact-container .form-container form .label-float textarea:not(:-moz-placeholder-shown) + label {
+  font-size: 12px;
+  margin-top: 0;
+}
+.contact .contact-container .form-container form .label-float input:focus + label, .contact .contact-container .form-container form .label-float input:not(:placeholder-shown) + label, .contact .contact-container .form-container form .label-float textarea:focus + label, .contact .contact-container .form-container form .label-float textarea:not(:placeholder-shown) + label {
+  font-size: 12px;
+  margin-top: 0;
+}
+.contact .contact-container .form-container form .label-float label {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+}
+.contact .contact-container .form-container form .label-float .label-msg {
+  margin-top: 22px;
+  margin-left: 8px;
+}
+.contact .contact-container .form-container form button {
+  background-color: #ff9f43;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  color: #1e1e1e;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+.contact .contact-container .form-container form button:hover {
+  box-shadow: 0 0 2px 1px rgba(254, 254, 254, 0.4588235294);
+}
+.contact .contact-container .form-container form button:active {
+  transform: scale(0.95);
+}
+
 .d-none {
   display: none;
 }
@@ -442,6 +601,50 @@ section.about-us .store-location .address .rotas img {
 
 .align-items-center {
   align-items: center;
+}
+
+.direction-column {
+  flex-direction: column;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.h-50 {
+  height: 50%;
+}
+
+.m-top-10 {
+  margin-top: 10px;
+}
+
+.m-top-8 {
+  margin-top: 8px;
+}
+
+.m-top-5 {
+  margin-top: 5px;
+}
+
+.m-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.m-bottom-8 {
+  margin-bottom: 8px;
+}
+
+.m-bottom-5 {
+  margin-bottom: 5px;
 }
 
 body {
