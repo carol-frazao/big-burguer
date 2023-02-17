@@ -421,13 +421,27 @@ section.about-us .store-location .address .rotas img {
 .contact {
   background-color: #262626;
 }
-.contact .phones {
+.contact .contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.contact .contact-container .phones {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
 }
-.contact .phones a {
+@media (max-width: 576px) {
+  .contact .contact-container .phones {
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+  }
+}
+.contact .contact-container .phones a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -437,43 +451,64 @@ section.about-us .store-location .address .rotas img {
   cursor: pointer;
   transition: 0.2s all;
 }
-.contact .phones a:hover {
+.contact .contact-container .phones a:hover {
   color: #ff9f43;
 }
-.contact .phones .tel svg {
+.contact .contact-container .phones .tel svg {
   color: #377dc3;
 }
-.contact .phones .wpp svg {
+.contact .contact-container .phones .wpp svg {
   color: #28c76f;
 }
-.contact .phones .telegram svg {
+.contact .contact-container .phones .telegram svg {
   color: #04c6db;
   background: #f6f6f6;
   border-radius: 50%;
 }
-.contact hr {
-  max-width: 100px;
+.contact .contact-container hr {
+  width: 100px;
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.4rem;
 }
-.contact span {
+@media (max-width: 576px) {
+  .contact .contact-container hr {
+    width: 60px;
+  }
+}
+.contact .contact-container span {
   color: #f6f6f6;
 }
-.contact .form-container form .label-float {
+.contact .contact-container .form-container {
+  width: 100%;
+}
+.contact .contact-container .form-container form {
+  width: 50%;
+}
+@media (max-width: 992px) {
+  .contact .contact-container .form-container form {
+    width: 70%;
+  }
+}
+@media (max-width: 576px) {
+  .contact .contact-container .form-container form {
+    width: 100%;
+  }
+}
+.contact .contact-container .form-container form .label-float {
   position: relative;
   padding-top: 18px;
 }
-.contact .form-container form .label-float label {
+.contact .contact-container .form-container form .label-float label {
   color: rgba(255, 255, 255, 0.6078431373);
 }
-.contact .form-container form .label-float textarea {
+.contact .contact-container .form-container form .label-float textarea {
   border: solid 2px #82868b !important;
   resize: none;
 }
-.contact .form-container form .label-float textarea:focus {
+.contact .contact-container .form-container form .label-float textarea:focus {
   border: solid 2px #ff9f43 !important;
 }
-.contact .form-container form .label-float input, .contact .form-container form .label-float textarea {
+.contact .contact-container .form-container form .label-float input, .contact .contact-container .form-container form .label-float textarea {
   color: #f6f6f6;
   background-color: transparent;
   border-color: transparent;
@@ -486,30 +521,30 @@ section.about-us .store-location .address .rotas img {
   -moz-transition: all 0.3s ease-out;
   -webkit-appearance: none;
 }
-.contact .form-container form .label-float input:focus, .contact .form-container form .label-float textarea:focus {
+.contact .contact-container .form-container form .label-float input:focus, .contact .contact-container .form-container form .label-float textarea:focus {
   border-bottom: 2px solid #ff9f43;
 }
-.contact .form-container form .label-float input::-moz-placeholder, .contact .form-container form .label-float textarea::-moz-placeholder {
+.contact .contact-container .form-container form .label-float input::-moz-placeholder, .contact .contact-container .form-container form .label-float textarea::-moz-placeholder {
   color: transparent;
 }
-.contact .form-container form .label-float input::placeholder, .contact .form-container form .label-float textarea::placeholder {
+.contact .contact-container .form-container form .label-float input::placeholder, .contact .contact-container .form-container form .label-float textarea::placeholder {
   color: transparent;
 }
-.contact .form-container form .label-float input:focus:required:invalid + label:before, .contact .form-container form .label-float textarea:focus:required:invalid + label:before {
+.contact .contact-container .form-container form .label-float input:focus:required:invalid + label:before, .contact .contact-container .form-container form .label-float textarea:focus:required:invalid + label:before {
   content: "*";
   color: #ea5455;
   margin-right: 4px;
   font-size: 12px;
 }
-.contact .form-container form .label-float input:not(:-moz-placeholder-shown) + label, .contact .form-container form .label-float textarea:not(:-moz-placeholder-shown) + label {
+.contact .contact-container .form-container form .label-float input:not(:-moz-placeholder-shown) + label, .contact .contact-container .form-container form .label-float textarea:not(:-moz-placeholder-shown) + label {
   font-size: 12px;
   margin-top: 0;
 }
-.contact .form-container form .label-float input:focus + label, .contact .form-container form .label-float input:not(:placeholder-shown) + label, .contact .form-container form .label-float textarea:focus + label, .contact .form-container form .label-float textarea:not(:placeholder-shown) + label {
+.contact .contact-container .form-container form .label-float input:focus + label, .contact .contact-container .form-container form .label-float input:not(:placeholder-shown) + label, .contact .contact-container .form-container form .label-float textarea:focus + label, .contact .contact-container .form-container form .label-float textarea:not(:placeholder-shown) + label {
   font-size: 12px;
   margin-top: 0;
 }
-.contact .form-container form .label-float label {
+.contact .contact-container .form-container form .label-float label {
   pointer-events: none;
   position: absolute;
   top: 0;
@@ -519,11 +554,11 @@ section.about-us .store-location .address .rotas img {
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
 }
-.contact .form-container form .label-float .label-msg {
+.contact .contact-container .form-container form .label-float .label-msg {
   margin-top: 22px;
   margin-left: 8px;
 }
-.contact .form-container form button {
+.contact .contact-container .form-container form button {
   background-color: #ff9f43;
   border: none;
   padding: 8px;
@@ -533,10 +568,10 @@ section.about-us .store-location .address .rotas img {
   text-transform: uppercase;
   transition: 0.2s;
 }
-.contact .form-container form button:hover {
+.contact .contact-container .form-container form button:hover {
   box-shadow: 0 0 2px 1px rgba(254, 254, 254, 0.4588235294);
 }
-.contact .form-container form button:active {
+.contact .contact-container .form-container form button:active {
   transform: scale(0.95);
 }
 

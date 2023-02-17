@@ -5,103 +5,122 @@
 .contact
     background-color: $light-dark
 
-    .phones
-        @include flex-center
-        gap: 1rem
+    .contact-container
 
-        a
+        @include  flex-center
+        flex-direction: column
+        width: 100%
+
+        .phones
             @include flex-center
-            gap: 4px
-            color: $light
-            text-decoration: none
-            cursor: pointer
-            transition: .2s all
-            &:hover
-                color:  $orange-primary
-        .tel svg
-            color: $blue
-        .wpp svg
-            color: $green
-        .telegram svg
-            color: $info
-            background: $light
-            border-radius: 50%
+            gap: 1rem
 
-    hr
-        max-width: 100px
-        margin-top: 2rem
-        margin-bottom: 1rem
-    span
-        color: $light
+            @include for-max-sm
+                flex-direction: column
+                align-items: flex-start
+                width: auto
 
-    .form-container
-        form
-            .label-float
-                position: relative
-                padding-top: 18px
-
-                label
-                    color:  $light-opacity
-                textarea
-                    border: solid 2px $secondary !important
-                    resize: none
-                    &:focus
-                        border: solid 2px $orange-primary !important
-                input, textarea
-                    color: $light
-                    background-color: transparent
-                    border-color: transparent
-                    border-bottom: solid 2px $secondary
-                    outline: none
-                    padding: 4px
-                    min-width: 180px
-                    transition: all .3s ease-out
-                    -webkit-transition: all .3s ease-out
-                    -moz-transition: all .3s ease-out
-                    -webkit-appearance: none
-                    &:focus
-                        border-bottom: 2px solid $orange-primary
-                    &::placeholder
-                        color: transparent
-                    // &:required:invalid + label
-                    //     color: $danger
-                    // &:focus:required:invalid
-                    //     border-bottom: 2px solid $danger
-                    &:focus:required:invalid + label:before
-                        content: '*'
-                        color: $danger
-                        margin-right: 4px
-                        font-size: 12px
-                    &:focus + label,
-                    &:not(:placeholder-shown) + label
-                        font-size: 12px
-                        margin-top: 0
-                label
-                    pointer-events: none
-                    position: absolute
-                    top: 0
-                    left: 0
-                    margin-top: 13px
-                    transition: all .3s ease-out
-                    -webkit-transition: all .3s ease-out
-                    -moz-transition: all .3s ease-out
-                .label-msg
-                    margin-top: 22px
-                    margin-left: 8px
-            button
-                background-color: $orange-primary
-                border: none
-                padding: 8px
-                border-radius: 4px
-                color: $dark
-                font-weight: bold
-                text-transform: uppercase
-                transition: .2s
+            a
+                @include flex-center
+                gap: 4px
+                color: $light
+                text-decoration: none
+                cursor: pointer
+                transition: .2s all
                 &:hover
-                    box-shadow: 0 0 2px 1px #fefefe75
-                &:active
-                    -webkit-transform: scale(.95)
-                    -moz-transform: scale(.95)
-                    -o-transform: scale(.95)
-                    -ms-transform: scale(.95)
-                    transform: scale(.95)
+                    color:  $orange-primary
+            .tel svg
+                color: $blue
+            .wpp svg
+                color: $green
+            .telegram svg
+                color: $info
+                background: $light
+                border-radius: 50%
+
+        hr
+            width: 100px
+            margin-top: 2rem
+            margin-bottom: 1.4rem
+            @include for-max-sm
+                width: 60px
+        span
+            color: $light
+
+        .form-container
+            width: 100%
+            form
+                width: 50%
+                @include for-max-lg
+                    width: 70%
+                @include for-max-sm
+                    width: 100%
+                .label-float
+                    position: relative
+                    padding-top: 18px
+
+                    label
+                        color:  $light-opacity
+                    textarea
+                        border: solid 2px $secondary !important
+                        resize: none
+                        &:focus
+                            border: solid 2px $orange-primary !important
+                    input, textarea
+                        color: $light
+                        background-color: transparent
+                        border-color: transparent
+                        border-bottom: solid 2px $secondary
+                        outline: none
+                        padding: 4px
+                        min-width: 180px
+                        transition: all .3s ease-out
+                        -webkit-transition: all .3s ease-out
+                        -moz-transition: all .3s ease-out
+                        -webkit-appearance: none
+                        &:focus
+                            border-bottom: 2px solid $orange-primary
+                        &::placeholder
+                            color: transparent
+                        // &:required:invalid + label
+                        //     color: $danger
+                        // &:focus:required:invalid
+                        //     border-bottom: 2px solid $danger
+                        &:focus:required:invalid + label:before
+                            content: '*'
+                            color: $danger
+                            margin-right: 4px
+                            font-size: 12px
+                        &:focus + label,
+                        &:not(:placeholder-shown) + label
+                            font-size: 12px
+                            margin-top: 0
+                    label
+                        pointer-events: none
+                        position: absolute
+                        top: 0
+                        left: 0
+                        margin-top: 13px
+                        transition: all .3s ease-out
+                        -webkit-transition: all .3s ease-out
+                        -moz-transition: all .3s ease-out
+                    .label-msg
+                        margin-top: 22px
+                        margin-left: 8px
+                button
+                    background-color: $orange-primary
+                    border: none
+                    padding: 8px
+                    border-radius: 4px
+                    color: $dark
+                    font-weight: bold
+                    text-transform: uppercase
+                    transition: .2s
+                    &:hover
+                        box-shadow: 0 0 2px 1px #fefefe75
+                    &:active
+                        -webkit-transform: scale(.95)
+                        -moz-transform: scale(.95)
+                        -o-transform: scale(.95)
+                        -ms-transform: scale(.95)
+                        transform: scale(.95)
