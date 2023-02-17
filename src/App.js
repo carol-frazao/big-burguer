@@ -4,6 +4,7 @@ import Intro from "./components/Intro/Intro";
 import Burguers from "./components/Burguers/Burguers";
 import About from "./components/About/About";
 import { useState } from "react";
+import Contact from "./components/Contato/Contact";
 
 function App() {
   const [showNavbar, setShowNavbar] = useState(false)
@@ -28,6 +29,7 @@ function App() {
         <Intro/>
         <Burguers/>
         <About/>
+        <Contact/>
       </main>
     </div>
   );

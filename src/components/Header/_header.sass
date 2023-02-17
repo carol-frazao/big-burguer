@@ -42,7 +42,7 @@
                     width: 100%
                     @include for-min-lg
                         &:active, &:hover, &:focus
-                            color: $orange
+                            color: $orange-primary
                             position: relative
                             &::after
                                 position: absolute
@@ -51,9 +51,9 @@
                                 content: ''
                                 width: 100%
                                 height: 2px
-                                background-color: $orange
+                                background-color: $orange-primary
         @include for-max-lg
-            background-color: $orange
+            background-color: $orange-primary
             height: 100vh
             position: fixed
             top: 0
@@ -98,7 +98,7 @@
         font-size: 25px
         cursor: pointer
         &:hover, &:active
-            color: $orange
+            color: $orange-primary
         @include for-max-lg
             display: block
 
