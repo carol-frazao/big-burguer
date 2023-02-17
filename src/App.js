@@ -1,10 +1,11 @@
 import "./App.css";
+import { useState } from "react";
 import Header from "./components/Header/Header";
 import Intro from "./components/Intro/Intro";
 import Burguers from "./components/Burguers/Burguers";
 import About from "./components/About/About";
-import { useState } from "react";
 import Contact from "./components/Contato/Contact";
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [showNavbar, setShowNavbar] = useState(false)
@@ -30,6 +31,7 @@ function App() {
         <Burguers/>
         <About/>
         <Contact/>
+        <Footer/>
       </main>
     </div>
   );
