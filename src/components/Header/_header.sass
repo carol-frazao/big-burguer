@@ -101,13 +101,22 @@
             right: -100%
 
     .active
-        color: $orange-primary !important
-        position: relative
-        &::after
-            position: absolute
-            left: 0
-            bottom: -3px
-            content: ''
-            width: 100%
-            height: 2px
-            background-color: $orange-primary
+        @include for-min-lg
+            position: relative
+            color: $orange-primary !important
+            &::after
+                position: absolute
+                left: 0
+                bottom: -3px
+                content: ''
+                width: 100%
+                height: 2px
+                background-color: $orange-primary
+        @include for-max-lg
+            &::before
+                position: relative
+                content: url(./components/Header/hamburger.png)
+                left: -10px
+                bottom: -2px
+
+
