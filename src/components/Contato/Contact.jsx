@@ -104,10 +104,6 @@ const Contact = () => {
                             <label htmlFor="name">Nome</label>
                             <Feedback error={errorName}/>
                         </div>
-                        <div className="input-assunto m-top-8 label-float">
-                            <input type="text" name="assunto" id="assunto" className='w-100' placeholder=' ' required/>
-                            <label htmlFor="name">Assunto</label>
-                        </div>
                         <div className="input-email m-top-8 label-float">
                             <input
                             type="email"
@@ -121,6 +117,10 @@ const Contact = () => {
                             required/>
                             <label htmlFor="email">Email</label>
                             <Feedback error={errorEmail}/>
+                        </div>
+                        <div className="input-assunto m-top-8 label-float">
+                            <input type="text" name="assunto" id="assunto" className='w-100' placeholder=' ' required/>
+                            <label htmlFor="name">Assunto</label>
                         </div>
                         <div className="input-mensagem m-top-8 label-float">
                             <textarea
